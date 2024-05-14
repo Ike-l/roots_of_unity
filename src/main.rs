@@ -33,9 +33,6 @@ fn main() {
         (max_r.max(c32.real), max_i.max(c32.imaginary))
     });
 
-    let distance = roots[0].distance(&roots[1]);
-    println!("Distance: {distance}");
-
     let dimensions = max_r.max(max_i) * 1.2;
     let path = "src/roots_of_unity.png";
     plot_data(path, &roots, dimensions).unwrap();
